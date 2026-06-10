@@ -1,0 +1,648 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #e8e8f0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0;
+}
+
+.container {
+    background-color: #faf8ff;
+    width: 100%;
+    max-width: 420px;
+    min-height: 100vh;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.page-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2rem;
+    color: #1a1aff;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.alert {
+    padding: 10px 14px;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    font-size: 0.875rem;
+}
+
+.alert-danger {
+    background: #ffe0e0;
+    color: #c0392b;
+}
+
+.alert-success {
+    background: #e0ffe8;
+    color: #1e8449;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+    width: 100%;
+    padding: 13px 16px;
+    background-color: #e4e4ea;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-family: 'Nunito', sans-serif;
+    color: #333;
+    outline: none;
+    transition: background 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    background-color: #d8d8e8;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.password-wrap {
+    position: relative;
+}
+
+.password-wrap input {
+    padding-right: 46px;
+}
+
+.toggle-pass {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    font-size: 1.1rem;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: #1a1aff;
+    color: white;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-danger {
+    background-color: #f0f0f0;
+    color: #e74c3c;
+}
+
+.btn-danger:hover {
+    background-color: #ffe0e0;
+}
+
+/* AUTH */
+.auth-page {
+    padding: 50px 28px 40px;
+}
+
+.auth-subtitle {
+    text-align: center;
+    color: #666;
+    margin-top: -14px;
+    margin-bottom: 32px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.auth-link a {
+    color: #1a1aff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.back-btn {
+    display: inline-block;
+    font-size: 1.3rem;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+/* HOME */
+.home-page {
+    padding: 24px 20px 100px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.hamburger {
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #222;
+}
+
+.notif-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.notif-icon {
+    position: relative;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.notif-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #e74c3c;
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 800;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notif-label {
+    background: #ddd;
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.greeting {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+/* Reminder Box */
+.reminder-box {
+    background: #dde3ff;
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.reminder-box .reminder-title {
+    font-weight: 800;
+    color: #1a1aff;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.reminder-close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.reminder-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.88rem;
+    margin-bottom: 6px;
+}
+
+.reminder-item .ri-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+}
+
+.deadline-today {
+    color: #e67e22;
+    font-weight: 700;
+}
+
+.deadline-other {
+    color: #555;
+    font-weight: 600;
+}
+
+/* Quick Add */
+.quick-add {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 22px;
+    align-items: center;
+}
+
+.quick-add input {
+    flex: 1;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 0.9rem;
+}
+
+.quick-add-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #1a1aff;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Task */
+.section-title {
+    font-weight: 800;
+    font-size: 1rem;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.task-item {
+    background: #e8e8ee;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.task-checkbox {
+    width: 24px;
+    height: 24px;
+    accent-color: #1a1aff;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.task-name {
+    flex: 1;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #222;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.task-name.done {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.task-meta {
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 2px;
+}
+
+.task-delete {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #e74c3c;
+    padding: 2px 4px;
+}
+
+.badge {
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.badge-Tinggi {
+    background: #ffe0e0;
+    color: #e74c3c;
+}
+
+.badge-Sedang {
+    background: #fff3cd;
+    color: #e67e22;
+}
+
+.badge-Rendah {
+    background: #e0ffe8;
+    color: #27ae60;
+}
+
+.tambah-btn {
+    margin-top: 16px;
+}
+
+/* Bottom Nav */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 420px;
+    background: #f0eff7;
+    display: flex;
+    border-top: 1px solid #ddd;
+    z-index: 100;
+}
+
+.nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #999;
+    font-size: 0.75rem;
+    font-weight: 600;
+    gap: 4px;
+}
+
+.nav-item.active {
+    color: #1a1aff;
+}
+
+.nav-item span {
+    font-size: 1.4rem;
+}
+
+/* Form pages */
+.form-page {
+    padding: 28px 24px 40px;
+}
+
+/* Profil */
+.profil-page {
+    padding: 28px 20px 100px;
+}
+
+.profil-avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.avatar-circle {
+    width: 80px;
+    height: 80px;
+    background: #5b5bff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.profil-name {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #111;
+}
+
+.profil-email {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 2px;
+}
+
+.profil-info {
+    background: #f5f5fa;
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    border-bottom: 1px solid #e8e8ee;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    color: #999;
+    font-size: 0.88rem;
+}
+
+.info-value {
+    font-weight: 700;
+    color: #222;
+    font-size: 0.88rem;
+}
+
+/* Jadwal */
+.jadwal-item {
+    background: #e8e8ee;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+}
+
+.jadwal-hari {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #1a1aff;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.jadwal-mapel {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.jadwal-jam {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 2px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 9px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    background: #e4e4ea;
+    color: #666;
+}
+
+.tab-btn.active {
+    background: #1a1aff;
+    color: white;
+}
+/* Sidebar */
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    transition: 0.3s;
+    z-index: 9999;
+    box-shadow: 3px 0 15px rgba(0,0,0,0.2);
+}
+
+.sidebar.active{
+    left: 0;
+}
+.overlay{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.4);
+    display:none;
+    z-index:9998;
+}
+
+.overlay.show{
+    display:block;
+}
+/* NOTIF */
+
+.notif-icon {
+    position: relative;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.notif-badge {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+}
+
+.notif-box {
+    display: none;
+    background: #fff8e1;
+    border: 1px solid #ffd54f;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.notif-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.notif-item:last-child {
+    border-bottom: none;
+}
